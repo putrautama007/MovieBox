@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Catalogue Movie UI UX</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="search">Search</string>
+    <string name="change_language">Change Language</string>
+
+    <string name="nyoman_putra_utama">Nyoman Putra Utama</string>
+    <string name="putrautama30_gmail_com">putrautama30@gmail.com</string>
+    <string name="film_title">Film Title</string>
+    <string name="release_date">Release Date</string>
+    <string name="detail">Detail</string>
+    <string name="rating">Rating</string>
+    <string name="share">Share</string>
+    <string name="overview">Sysnopsis</string>
+    <string name="settings">Settings</string>
+    <string name="label_setting_localization">Change your phone localization</string>
+    <string name="label_setting_localization_title">Setting Language</string>
+    <string name="error_fetch">Error Fetching Data!</string>
+    <string name="search_by">Search by tittle</string>
+    <string name="no_api_data">No Api Data</string>
+</resources>

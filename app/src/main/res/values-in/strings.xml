@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Catalogue Movie UI UX</string>
+    <string name="navigation_drawer_open">Buka panel samping navigasi</string>
+    <string name="navigation_drawer_close">Tutup panel navigasi</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Tajuk navigasi</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="upcoming">Akan Tayang</string>
+    <string name="now_playing">Sedang Dimainkan</string>
+    <string name="search">Pencarian</string>
+    <string name="change_language">Ganti Bahasa</string>
+
+    <string name="nyoman_putra_utama">Nyoman Putra Utama</string>
+    <string name="putrautama30_gmail_com">putrautama30@gmail.com</string>
+    <string name="film_title">Judul Film</string>
+    <string name="release_date">Tanggal Rilis</string>
+    <string name="detail">Rincian</string>
+    <string name="rating">Penilaian</string>
+    <string name="share">Bagikan</string>
+    <string name="overview">Sinopsis</string>
+    <string name="settings">Pengaturan</string>
+
+    <string name="label_setting_localization">Ubah Bahasa pada perangkat anda </string>
+    <string name="label_setting_localization_title">Pengaturan Bahasa</string>
+    <string name="error_fetch">Terjadi Kesalahan Mengambil Data!</string>
+    <string name="search_by">Melakukan pencarian berdasarkan judul</string>
+    <string name="no_api_data">Tidak ada Data API</string>
+</resources>
