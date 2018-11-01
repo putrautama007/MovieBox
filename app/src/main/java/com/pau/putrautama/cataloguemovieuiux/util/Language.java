@@ -1,4 +1,4 @@
-package com.pau.putrautama.cataloguemovieuiux.Util;
+package com.pau.putrautama.cataloguemovieuiux.util;
 
 import java.util.Locale;
 

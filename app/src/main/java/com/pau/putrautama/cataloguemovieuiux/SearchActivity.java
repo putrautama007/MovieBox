@@ -4,15 +4,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.widget.Toast;
 
-import com.pau.putrautama.cataloguemovieuiux.API.Client;
-import com.pau.putrautama.cataloguemovieuiux.API.Service;
-import com.pau.putrautama.cataloguemovieuiux.Adapter.MoviesAdapter;
-import com.pau.putrautama.cataloguemovieuiux.Model.MovieList;
-import com.pau.putrautama.cataloguemovieuiux.Model.MovieResponse;
-import com.pau.putrautama.cataloguemovieuiux.Util.Language;
+import com.pau.putrautama.cataloguemovieuiux.api.Client;
+import com.pau.putrautama.cataloguemovieuiux.adapter.MoviesAdapter;
+import com.pau.putrautama.cataloguemovieuiux.model.MovieList;
+import com.pau.putrautama.cataloguemovieuiux.model.MovieResponse;
+import com.pau.putrautama.cataloguemovieuiux.util.Language;
 
 import java.util.ArrayList;
 import java.util.List;

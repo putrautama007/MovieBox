@@ -1,4 +1,4 @@
-package com.pau.putrautama.cataloguemovieuiux.Adapter;
+package com.pau.putrautama.cataloguemovieuiux.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,8 +12,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.google.gson.Gson;
 import com.pau.putrautama.cataloguemovieuiux.DetailActivity;
-import com.pau.putrautama.cataloguemovieuiux.Model.MovieList;
+import com.pau.putrautama.cataloguemovieuiux.model.MovieList;
 import com.pau.putrautama.cataloguemovieuiux.R;
 
 import java.util.List;
@@ -48,14 +49,10 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
         holder.btnDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 MovieList clickDataItem = movieList.get(position);
                 Intent intent = new Intent(context, DetailActivity.class);
-                intent.putExtra("original_title", movieList.get(position).getOriginal_title());
-                intent.putExtra("poster_path", movieList.get(position).getPosterPath());
-                intent.putExtra("overview", movieList.get(position).getOverview());
-                intent.putExtra("vote_average", Double.toString(movieList.get(position).getVote_average()));
-                intent.putExtra("release_date", movieList.get(position).getRelease_date());
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra(DetailActivity.ITEM_MOVIE, new Gson().toJson(clickDataItem));
                 context.startActivity(intent);
                 Toast.makeText(v.getContext(), clickDataItem.getOriginal_title(), Toast.LENGTH_SHORT).show();
             }

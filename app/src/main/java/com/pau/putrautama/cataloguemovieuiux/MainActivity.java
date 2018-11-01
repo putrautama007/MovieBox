@@ -2,7 +2,7 @@ package com.pau.putrautama.cataloguemovieuiux;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.Settings;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.design.widget.NavigationView;
@@ -14,12 +14,29 @@ import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
-import com.pau.putrautama.cataloguemovieuiux.Fragment.NowPlayingFragment;
-import com.pau.putrautama.cataloguemovieuiux.Fragment.UpcomingFragment;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.pau.putrautama.cataloguemovieuiux.fragment.NowPlayingFragment;
+import com.pau.putrautama.cataloguemovieuiux.fragment.PopularFragment;
+import com.pau.putrautama.cataloguemovieuiux.fragment.TopRatedFragment;
+import com.pau.putrautama.cataloguemovieuiux.fragment.UpcomingFragment;
+import com.pau.putrautama.cataloguemovieuiux.model.User;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    TextView mName, mEmail;
+    private DatabaseReference mFirebaseDatabase;
+    private FirebaseDatabase mFirebaseInstance;
+    private FirebaseAuth mAuth;
+    private String userId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +46,10 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
+        mAuth = FirebaseAuth.getInstance();
+        mFirebaseInstance = FirebaseDatabase.getInstance();
+        mFirebaseDatabase = mFirebaseInstance.getReference("users");
+
         DrawerLayout drawer =  findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -36,8 +57,31 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = findViewById(R.id.nav_view);
+        View header = navigationView.getHeaderView(0);
+        mName = header.findViewById(R.id.nama_user);
+        mEmail = header.findViewById(R.id.email_user);
+        retriveData();
+
         navigationView.setNavigationItemSelectedListener(this);
         itemSelect(R.id.nav_nowplaying);
+    }
+
+    private void retriveData(){
+        userId = mAuth.getUid();
+        mFirebaseDatabase.child(userId).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                User user = dataSnapshot.getValue(User.class);
+                mName.setText(user.getNamaLengkap());
+                mEmail.setText(user.getEmail());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
     }
 
     @Override
@@ -93,6 +137,12 @@ public class MainActivity extends AppCompatActivity
                break;
            case R.id.nav_upcoming:
                fragment = new UpcomingFragment();
+               break;
+           case R.id.nav_populer:
+               fragment = new PopularFragment();
+               break;
+           case R.id.nav_top_rated:
+               fragment = new TopRatedFragment();
                break;
        }
        if (fragment != null){

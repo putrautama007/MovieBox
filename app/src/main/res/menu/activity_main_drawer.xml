@@ -10,8 +10,17 @@
             android:title="@string/now_playing" />
         <item
             android:id="@+id/nav_upcoming"
-            android:icon="@drawable/upcoming"
+            android:icon="@drawable/coming_soon"
             android:title="@string/upcoming" />
+
+        <item
+            android:id="@+id/nav_populer"
+            android:icon="@drawable/populer"
+            android:title="@string/populer" />
+        <item
+            android:id="@+id/nav_top_rated"
+            android:icon="@drawable/top_rated"
+            android:title="@string/top_rated"/>
     </group>
 
 

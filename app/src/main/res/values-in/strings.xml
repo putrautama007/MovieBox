@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Catalogue Movie UI UX</string>
+    <string name="app_name">Movie Box</string>
     <string name="navigation_drawer_open">Buka panel samping navigasi</string>
     <string name="navigation_drawer_close">Tutup panel navigasi</string>
     <string name="nav_header_title">Android Studio</string>
@@ -26,4 +26,30 @@
     <string name="error_fetch">Terjadi Kesalahan Mengambil Data!</string>
     <string name="search_by">Melakukan pencarian berdasarkan judul</string>
     <string name="no_api_data">Tidak ada Data API</string>
+    <string name="favorite">Favorit</string>
+    <string name="save_favorite">Anda memfavoritkan film ini</string>
+    <string name="remove_favorite">Film ini sudah di hapus dari favorit</string>
+    <string name="email">Email</string>
+    <string name="password">Kata Sandi</string>
+    <string name="login">Masuk</string>
+    <string name="don_t_have_account_register">Belum punya akun? Daftar</string>
+    <string name="register">Daftar</string>
+    <string name="already_have_account_login">Sudah punya akun? Masuk</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="phone">Telepon</string>
+    <string name="enter_pass">Mohon masukan kata sandi</string>
+    <string name="unvalid_email">Mohon masukan email yang valid</string>
+    <string name="enter_email">Mohon masukan email</string>
+    <string name="login_succesful">Berhasil masuk</string>
+    <string name="login_failed">Gagal masuk</string>
+    <string name="enter_phone">Mohon masukan nomor telepon</string>
+    <string name="min_pass">Mohon masukan password dengan minimal 6 karakter</string>
+    <string name="full_name">mohon masukan nama lengkap</string>
+    <string name="register_success">Berhasil mendaftar</string>
+    <string name="email_allready_register">Email sudah pernah digunakan</string>
+    <string name="register_failed">Gagal mendaftar</string>
+    <string name="logout">Keluar</string>
+    <string name="top_rated">Peringkat Teratas</string>
+    <string name="populer">Populer</string>
+    <string name="error_connection">Tidak bisa menampilkan film, mohon cek koneksi anda</string>
 </resources>

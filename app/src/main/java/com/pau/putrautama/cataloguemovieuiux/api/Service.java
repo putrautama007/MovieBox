@@ -1,6 +1,6 @@
-package com.pau.putrautama.cataloguemovieuiux.API;
+package com.pau.putrautama.cataloguemovieuiux.api;
 
-import com.pau.putrautama.cataloguemovieuiux.Model.MovieResponse;
+import com.pau.putrautama.cataloguemovieuiux.model.MovieResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -13,7 +13,14 @@ public interface Service {
     @GET("movie/upcoming")
     Call<MovieResponse> getUpComing(@Query("language") String language);
 
+    @GET("movie/popular")
+    Call<MovieResponse> getPopular(@Query("language") String language);
+
+    @GET("movie/top_rated")
+    Call<MovieResponse> getTopRated(@Query("language") String language);
 
     @GET("search/movie")
     Call<MovieResponse> getSeachMovie(@Query("query") String query, @Query("language") String language);
+
+
 }

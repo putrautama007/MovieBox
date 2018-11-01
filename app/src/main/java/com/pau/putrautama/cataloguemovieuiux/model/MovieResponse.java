@@ -1,6 +1,4 @@
-package com.pau.putrautama.cataloguemovieuiux.Model;
-
-import android.graphics.Movie;
+package com.pau.putrautama.cataloguemovieuiux.model;
 
 import com.google.gson.annotations.SerializedName;
 

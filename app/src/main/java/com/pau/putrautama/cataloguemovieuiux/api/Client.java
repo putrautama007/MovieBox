@@ -1,4 +1,4 @@
-package com.pau.putrautama.cataloguemovieuiux.API;
+package com.pau.putrautama.cataloguemovieuiux.api;
 
 import com.pau.putrautama.cataloguemovieuiux.BuildConfig;
 
@@ -15,7 +15,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Client {
     private Service service;
 
-    public static final String BASE_URL="https://api.themoviedb.org/3/";
+    public static final String BASE_URL=BuildConfig.BASE_URL;
 
     public Client(){
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(new Interceptor() {

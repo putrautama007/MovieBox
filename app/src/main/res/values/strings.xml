@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Catalogue Movie UI UX</string>
+    <string name="app_name">MovieBox</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -25,4 +25,31 @@
     <string name="error_fetch">Error Fetching Data!</string>
     <string name="search_by">Search by tittle</string>
     <string name="no_api_data">No Api Data</string>
+    <string name="favorite">Favorite</string>
+    <string name="save_favorite">You favorite this movie</string>
+    <string name="remove_favorite">This movie has been remove from favorite</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_account_register">Don\'t have account? Register</string>
+    <string name="register">Register</string>
+    <string name="already_have_account_login">Already Have Account? Login</string>
+    <string name="nama_lengkap">Full Name</string>
+    <string name="phone">Phone</string>
+    <string name="enter_pass">Please enter password</string>
+    <string name="unvalid_email">Please enter a valid email</string>
+    <string name="enter_email">Please enter email</string>
+    <string name="login_succesful">Login successful</string>
+    <string name="login_failed">Login failed</string>
+    <string name="enter_phone">Please enter phone number</string>
+    <string name="min_pass">Please enter password with minimum 6 characters</string>
+    <string name="full_name">Please enter full name</string>
+    <string name="register_success">Register successful</string>
+    <string name="email_allready_register">Email allready register</string>
+    <string name="register_failed">Register failed</string>
+    <string name="logout">Logout</string>
+
+    <string name="populer">Populer</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="error_connection">Can\'t load movies, please check your connection</string>
 </resources>
